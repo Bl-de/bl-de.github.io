@@ -5,6 +5,12 @@
   <link href="./style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<script type="text/javascript">
+document.write ('<p><span id="date-time">', new Date().toLocaleString(), '<\/span>.<\/p>')
+if (document.getElementById) onload = function () {
+	setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+}
+</script>
 	<div id="google-pixel-frame">
 	<form action="index.html" class="login">
 		<input type="email" name="email" class="login-input" placeholder="Email">
